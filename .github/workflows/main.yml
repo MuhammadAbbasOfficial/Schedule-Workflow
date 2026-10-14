@@ -1,0 +1,13 @@
+name: schedule jobs
+
+on:
+  schedule: 
+    - cron:  "0 0 * * *"
+
+jobs:
+  run-script:
+    runs-on: ubunto latest
+
+    steps:
+      - name: Print Message
+        run : "schedule workflow executed"
